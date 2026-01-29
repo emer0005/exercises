@@ -7,6 +7,7 @@ const player2 = document.querySelector("#player2");
 const draw = document.querySelector("#draw");
 const win = document.querySelector("#win");
 const lose = document.querySelector("#lose");
+const buttons = document.querySelector("#buttons");
 let userChoice;
 let computerChoice;
 
@@ -22,6 +23,7 @@ function init() {
 function rockClick() {
   console.log("rock");
   userChoice = "rock";
+  buttons.classList.add("disabled");
   computerChooses();
   resetGame();
 }
@@ -29,6 +31,7 @@ function rockClick() {
 function paperClick() {
   console.log("paper");
   userChoice = "paper";
+  buttons.classList.add("disabled");
   computerChooses();
   resetGame();
 }
@@ -36,6 +39,7 @@ function paperClick() {
 function scissorsClick() {
   console.log("scissors");
   userChoice = "scissors";
+  buttons.classList.add("disabled");
   computerChooses();
   resetGame();
 }
@@ -59,6 +63,7 @@ function showChoice() {
   player2.classList.remove("shake");
   player1.classList.add(userChoice);
   player2.classList.add(computerChoice);
+  buttons.classList.remove("disabled");
 
   if (userChoice === computerChoice) {
     draw.classList.remove("hidden");
