@@ -15,10 +15,14 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
   console.log("hej");
-  rock_btn.addEventListener("click", rockClick);
-  paper_btn.addEventListener("click", paperClick);
-  scissors_btn.addEventListener("click", scissorsClick);
+  rock_btn.addEventListener("click", btnClick);
+  paper_btn.addEventListener("click", btnClick);
+  scissors_btn.addEventListener("click", btnClick);
 }
+
+// Her skal eventlistener have hver deres funktion
+
+/*
 
 function rockClick() {
   console.log("rock");
@@ -39,6 +43,23 @@ function paperClick() {
 function scissorsClick() {
   console.log("scissors");
   userChoice = "scissors";
+  buttons.classList.add("disabled");
+  computerChooses();
+  resetGame();
+}
+  */
+
+// funktion hvor man samler de 3 click til en funktion (der skal ændres i eventlistener til samme funktion)
+
+function btnClick(evt) {
+  console.log(evt.target.classList.contains("rock"));
+  if (evt.target.classList.contains("rock")) {
+    userChoice = "rock";
+  } else if (evt.target.classList.contains("paper")) {
+    userChoice = "paper";
+  } else {
+    userChoice = "scissors";
+  }
   buttons.classList.add("disabled");
   computerChooses();
   resetGame();

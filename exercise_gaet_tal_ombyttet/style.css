@@ -1,0 +1,11 @@
+.buttons {
+  display: none;
+}
+
+.buttons.active {
+  display: block;
+}
+
+#start_btn.hidden {
+  display: none;
+}
