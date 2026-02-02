@@ -1,4 +1,5 @@
 console.log("hej");
+// importere funktion fra mit utils_lib
 import { getRandomNumber } from "../utils/utils_lib.js";
 
 const tilfældigt_tal = getRandomNumber(100);

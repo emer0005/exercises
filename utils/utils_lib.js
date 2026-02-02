@@ -1,3 +1,4 @@
+// Huske export så den kan importeres
 export function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
 }
