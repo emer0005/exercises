@@ -1,0 +1,12 @@
+ul {
+  display: flex;
+  gap: 15px;
+}
+
+li:not(:first-child) {
+  list-style: "/";
+}
+
+li:first-child {
+  list-style: none;
+}
