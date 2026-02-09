@@ -1,0 +1,82 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/****************************************/
+
+[data-theme="hawii"] {
+  --header-bg-col: red;
+  --main-bg-col: yellow;
+  --footer-bg-col: aqua;
+  --header-font-col: yellow;
+  --footer-font-col: red;
+  --main-font-col: aqua;
+}
+
+[data-theme="dark"] {
+  --header-bg-col: darkgreen;
+  --main-bg-col: greenyellow;
+  --footer-bg-col: darkgreen;
+  --header-font-col: greenyellow;
+  --footer-font-col: greenyellow;
+  --main-font-col: darkgreen;
+}
+
+[data-theme="light"] {
+  --header-bg-col: lightblue;
+  --main-bg-col: lightgreen;
+  --footer-bg-col: lightyellow;
+  --header-font-col: lightgreen;
+  --footer-font-col: lightblue;
+  --main-font-col: lightyellow;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--header-bg-col);
+  padding: 0 2rem;
+  padding-top: 3rem;
+}
+
+main {
+  background-color: var(--main-bg-col);
+  padding: 0 2rem;
+  padding-bottom: 6rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+footer {
+  background-color: var(--footer-bg-col);
+  padding: 0 2rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  font-size: 3rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Ranchers", sans-serif;
+  color: var(--header-font-col);
+}
+
+h2 {
+  font-family: "Sour Gummy", sans-serif;
+  color: var(--footer-font-col);
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--main-font-col);
+}

@@ -14,15 +14,11 @@ function init() {
 function stringMethodes() {
   console.log(stringOptions.value);
   if (stringOptions.value === "firstCharacter") {
-    const FirstLetter = input.value.substring(0, 1).toUpperCase();
-    const Lastpart = input.value.substring(1).toLowerCase();
-    output.value = FirstLetter + Lastpart;
+    output.value = input.value.substring(0, 1).toUpperCase() + input.value.substring(1).toLowerCase();
   } else if (stringOptions.value === "findFirstName") {
-    const firstSpace = input.value.indexOf(" ");
-    output.value = input.value.substring(0, firstSpace);
+    output.value = input.value.substring(0, input.value.indexOf(" "));
   } else if (stringOptions.value === "lengthOfFirstName") {
-    const first_Space = input.value.indexOf(" ");
-    output.value = input.value.substring(0, first_Space).length;
+    output.value = input.value.substring(0, input.value.indexOf(" ")).length;
   } else if (stringOptions.value === "middleName") {
     const firstPositions = input.value.indexOf(" ") + 1;
     const endPosiotions = input.value.lastIndexOf(" ");
