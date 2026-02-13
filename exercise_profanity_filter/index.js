@@ -6,6 +6,7 @@ const curseWords = [
 
 const txt = document.querySelector(".text");
 const button = document.querySelector(".button");
+const close_button = document.querySelector(".close_button");
 const dialog = document.querySelector(".dialog");
 let done = false;
 
@@ -17,12 +18,23 @@ function init() {
 function erstatOrd() {
   if (done === true) {
     dialog.show();
+    close_button.addEventListener("click", restart);
   } else {
     let text = txt.textContent;
-    curseWords.forEach((item) => {
-      text = text.replaceAll(item.bad, item.good);
+    curseWords.forEach((word) => {
+      text = text.replaceAll(word.bad, `<span>${word.good}</span>`);
     });
-    txt.textContent = text;
+    txt.innerHTML = text;
     done = true;
   }
+}
+
+function restart() {
+  dialog.close();
+  done = false;
+  text = txt.textContent;
+  curseWords.forEach((word) => {
+    text = text.replaceAll(word.good, word.bad);
+  });
+  txt.textContent = text;
 }
